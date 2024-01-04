@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+@font-face {
+  font-family: "lemon-milk";
+  src: url("../../public/fonts/LEMONMILK-Regular.otf");
+}
+@font-face {
+  font-family: "lemon-milk-bold";
+  src: url("../../public/fonts/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family: "lemon-milk-light";
+  src: url("../../public/fonts/LEMONMILK-Light.otf");
+}
+@font-face {
+  font-family: "lemon-milk-medium";
+  src: url("../../public/fonts/LEMONMILK-Medium.otf");
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.background-change-container {
+  transition: background-color 2.5s ease-in-out;
+}
+
+.character-info {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.background-change-container.character-info-active .character-info {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.6); /* Lighter shade of black for the border */
+  background-color: transparent; /* Keep the inside of the circle transparent */
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  transition: background-color 0.02s, transform 0.02s, width 0.02s, height 0.02s; /* Smooth transition for color and size changes */
+}
+
+/* Cursor effect when hovering over buttons */
+.custom-cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  cursor: none;
+}
+
+.image {
+  justify-content: center;
+  top: 60px;
+  width: 100%;
+  height: auto; 
+  display: block; 
+  object-fit: contain; 
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 600px; 
+  height: 400px;
+  margin: auto; 
+  box-sizing: border-box;
+}
+
+.transition-image {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateX(100%);
+}
+
+.transition-image.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.arrow-keys {
+  text-align: center; 
+  margin-top: 10px;
+  justify-content: center;
+
+}
+
+.arrow-key {
+  
+  top: 10px; /*Increased gap between the image and the bars */
+  width: 30px;
+  height: 3px;
+  background-color: #40635e; /* A less intense color */
+  /* cursor: pointer; */
+  transition: all 0.3s ease;
+  border-radius: 2px; /* Smooth corners */
+}
+
+.arrow-key:hover {
+  background-color: #baedec; /* A slightly darker color on hover */
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #888; /* Glow color matching the website theme */
+}
+
+.left-arrow {
+  left: calc(50% + 20px); /* Adjusted for gap */
+}
+
+.right-arrow {
+  right: calc(50% + 20px); /* Adjusted for gap */
+}
+
+
+.navigation-bars {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navigation-bar {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #555;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.navigation-bar.active {
+  background-color: #666;
+  box-shadow: 0 0 8px #888;
+}
+
+/* Hide the default cursor for all interactive elements */
+a, button, input, textarea, select, Canvas, VscArrowCircleLeft, VscArrowCircleRight {
+  cursor: none !important;
+}
