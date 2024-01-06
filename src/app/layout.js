@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Shardscape',
-  description: 'Shardscape Fight to WIN Game',
+  title: 'EVM Warfare',
+  description: 'EVM Warfare website',
 }
 
 export default function RootLayout({ children }) {
