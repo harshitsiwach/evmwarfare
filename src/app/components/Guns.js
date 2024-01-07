@@ -37,7 +37,7 @@ function Guns() {
   }, [currentImageIndex]);
 
   return (
-    <div className='bg-gray-200 font-lemon-milk pt-8 text-black'>
+    <div className='bg-gray-900 font-lemon-milk pt-8 text-gray-200'>
       <div className='grid md:grid-cols-2 gap-12 border-1 rounded-md border-inherit pt-14'>
         <div className='p-4'>
           <h1 className='text-center text-3xl md:text-left'>
@@ -59,10 +59,11 @@ function Guns() {
             width={500}
             height={200}
             alt="Game Screenshot"
+            className='rounded-lg'
           />
-           
-
           </div>
+
+          // Guns Table
           <div className="md:mb-14 md:mr-10 md:mt-9">
             <div className="flex items-center font-lemon-milk justify-between border-t border-b-2 border-dashed border-black py-1">
               <div className="flex-1 text-center">
