@@ -25,7 +25,7 @@ const characters = [
     name: "Shadowstalker",
   },
   {
-    path: "/shiba/char2.gltf",
+    path: "/shiba/11.gltf",
     info: "Enter the shadows with 'Shadowstalker,' an elusive and mysterious competitor who thrives in the dark corners of the arena. With a keen eye for concealment and lightning-quick reflexes, Shadowstalker moves silently, striking fear into the hearts of opponents. Beware the unseen presence, for they are a master of surprise and subterfuge.",
     name: "Shadowstalker",
   },
@@ -49,7 +49,7 @@ function MeshComponent({ characterIndex }) {
 
 /* ... (imports) */
 
-export function Shiba() {
+export function Characters() {
   const [currentCharacter, setCurrentCharacter] = useState(0);
   const [backgroundColor, setBackgroundColor] = useState('#E5E7EB');
   const [showMoreInfo, setShowMoreInfo] = useState(false);

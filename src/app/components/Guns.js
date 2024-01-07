@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { VscArrowCircleLeft, VscArrowCircleRight } from 'react-icons/vsc';
 
-function GameInfo() {
+function Guns() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/images/guns/1.png", "/images/guns/2.png", "/images/guns/3.png"]; // Add more image paths as needed
+  const images = ["/images/guns/image1.png", "/images/guns/image2.png", "/images/guns/image3.png","/images/guns/image4.png","/images/guns/image5.png","/images/guns/image6.png"]; // Add more image paths as needed
   const descriptions = [
     "The AR-15, a versatile and powerful assault rifle, is known for its accuracy and adaptability on the battlefield.",
     "The 12-gauge shotgun, a close-quarters powerhouse, delivers devastating firepower at short range.",
@@ -106,4 +106,4 @@ function GameInfo() {
   );
 }
 
-export default GameInfo;
+export default Guns;

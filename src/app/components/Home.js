@@ -3,15 +3,11 @@ import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
 import { VscArrowCircleLeft, VscArrowCircleRight } from 'react-icons/vsc';
 
-function GameSection() {
+function Home() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = ["/images/homepage/1.png", "/images/homepage/2.png", "/images/homepage/3.png", "/images/homepage/4.png", "/images/homepage/5.png", "/images/homepage/6.png"]; // Add more image paths as needed
-  const descriptions = [
-    "The AR-15, a versatile and powerful assault rifle, is known for its accuracy and adaptability on the battlefield.",
-    "The 12-gauge shotgun, a close-quarters powerhouse, delivers devastating firepower at short range.",
-    "The 9mm pistol, a classic sidearm, offers reliability and precision for tactical versatility."
-  ];
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -94,4 +90,4 @@ function GameSection() {
   );
 }
 
-export default GameSection;
+export default Home;

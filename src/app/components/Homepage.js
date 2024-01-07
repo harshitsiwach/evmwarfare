@@ -1,12 +1,13 @@
 import React from 'react'
-import { Shiba } from "./Shiba";
+import { Characters } from "./Characters";
 import Poweredby from './Poweredby';
-import GameSection from './GameSection';
-import GameInfo from './GameInfo';
+import Home from './Home';
+import Guns from './Guns';
 import Image from 'next/image';
 import Header from "./Header";
 import SUpportedChains from './SupportedChains';
-
+import PrivacyPolicy from './PrivacyPolicy';
+import Link from 'next/link';
 
 function Homepage() {
    
@@ -19,16 +20,16 @@ function Homepage() {
         <Header />
         </div>
         <div className='h-auto ' >
-            <GameSection/>
+            <Home/>
         </div>
         <div className='h-auto'>
-           <Shiba />
+           <Characters/>
         </div>
         <div className='pt-2 '>
              <SUpportedChains />
         </div>
         <div className='h-[780px]  pt-12' >
-            <GameInfo/>
+            <Guns/>
         </div>
         <div className='pt-2 '>
              <Poweredby />
@@ -42,12 +43,12 @@ function Homepage() {
       </div>
 
         <div>
-        <a href="https://privacy.evmwarfare.com" target="_blank" rel="noopener noreferrer" 
-        className="border-2 border-gray-300 hover:border-gray-700 text-gray-400 hover:text-gray-700 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out bg-transparent font-lemon-milk">
+        <Link href="./PrivacyPolicy"
+        className="border-2 border-gray-300 hover:border-gray-700 text-gray-400
+         hover:text-gray-700 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out bg-transparent font-lemon-milk">
             Privacy Policy
-        </a>
+        </Link>
         </div>
-        
        
     </main>
   )
