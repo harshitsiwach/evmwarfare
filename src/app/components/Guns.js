@@ -62,8 +62,6 @@ function Guns() {
             className='rounded-lg'
           />
           </div>
-
-          // Guns Table
           <div className="md:mb-14 md:mr-10 md:mt-9">
             <div className="flex items-center font-lemon-milk justify-between border-t border-b-2 border-dashed border-black py-1">
               <div className="flex-1 text-center">
